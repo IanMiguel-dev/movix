@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SaaS Gestão de Transporte</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login-section" class="card">
+    <h2>Login</h2>
+    <div class="form-control">
+      <label>Email:</label>
+      <input type="email" id="login-email" />
+    </div>
+    <div class="form-control">
+      <label>Senha:</label>
+      <input type="password" id="login-password" />
+    </div>
+    <button onclick="login()">Entrar</button>
+    <p>Não tem conta? <a href="#" onclick="toggleSections('signup')">Cadastre-se</a></p>
+  </div>
+
+  <div id="signup-section" class="card hidden">
+    <h2>Cadastro</h2>
+    <div class="form-control">
+      <label>Nome:</label>
+      <input type="text" id="signup-name" />
+    </div>
+    <div class="form-control">
+      <label>Email:</label>
+      <input type="email" id="signup-email" />
+    </div>
+    <div class="form-control">
+      <label>Senha:</label>
+      <input type="password" id="signup-password" />
+    </div>
+    <button onclick="signup()">Cadastrar</button>
+    <p>Já tem conta? <a href="#" onclick="toggleSections('login')">Faça login</a></p>
+  </div>
+
+  <div id="dashboard-section" class="card hidden">
+    <h1>Dashboard</h1>
+    <h2>Agendar Transporte</h2>
+    <div class="form-control">
+      <label>Data:</label>
+      <input type="date" id="data" />
+    </div>
+    <div class="form-control">
+      <label>Hora:</label>
+      <input type="time" id="hora" />
+    </div>
+    <div class="form-control">
+      <label>Local de Embarque:</label>
+      <input type="text" id="embarque" />
+    </div>
+    <div class="form-control">
+      <label>Local de Desembarque:</label>
+      <input type="text" id="desembarque" />
+    </div>
+    <div class="form-control">
+      <label>Motorista:</label>
+      <input type="text" id="motorista" />
+    </div>
+    <div class="form-control">
+      <label>Veículo:</label>
+      <input type="text" id="veiculo" />
+    </div>
+    <button onclick="adicionarAgendamento()">Salvar Agendamento</button>
+
+    <h2>Agendamentos</h2>
+    <table id="tabela-agendamentos">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Hora</th>
+          <th>Embarque</th>
+          <th>Desembarque</th>
+          <th>Motorista</th>
+          <th>Veículo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
